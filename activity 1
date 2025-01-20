@@ -1,0 +1,35 @@
+<?php
+class product {
+public $name;
+public $description;
+public $price;
+public $category;
+public $stock;
+
+public function setproduct($name, $description, $price, $category, $stock) {
+$this->name = $name;
+$this->description = $description;
+$this->price = $price;
+$this->category = $category;
+$this->stock = $stock;
+}
+
+public function getProductInfo()
+{
+return "Product Name: " .
+$this->name . "\n" .
+         "Description: " .
+$this->description . "\n" .
+         "Price: " .
+$this->price. "\n" .
+         "Category: " .
+$this->category. "\n" .
+         "Stock: " .
+$this->stock;
+  }
+}
+
+$product = new Product();
+$product->setProduct("SmartPhones" , "Touchscreen display", " 15,999" ,"Midrange smartphones", "56");
+print($product->getProductInfo());
+?>
